@@ -1,0 +1,29 @@
+.header-foto-container {
+    padding: 0;
+    border: 0;
+}
+
+.col-foto {
+    padding: 0;
+    border: 0;
+    margin-left: 0px;
+    margin-right: -0px;
+    padding-right: -0px;
+    margin-top: 0px;
+}
+
+.foto-RAG-container {
+    margin-top: -6em;
+    margin-left: 5vw
+}
+
+.foto-RAG {
+    background-color: white;
+    width: 25vw;
+    max-width: 12em;
+    border-radius: 50%;
+}
+
+.texto-info {
+    margin-left: 5vw;
+}
