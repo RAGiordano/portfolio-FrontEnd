@@ -1,0 +1,37 @@
+<!-- Banner -->
+<div class="container-xxl m-0 p-0 b-0"> 
+    <div class="row row-seccion m-0 p-0 b-0"> <!-- Encabezado completo -->
+        <div class="col-sm-12 m-0 p-0 b-0"> <!-- Banner personal -->
+            <div class="banner-container m-0 p-0 b-0">
+                <img 
+                id="banner"
+                [src]="persona.url_banner"
+                alt="Banner personal"/>
+            </div>                 
+        </div>
+
+    </div>
+
+    <div class="row row-seccion"> <!-- Foto y texto sección personal -->
+        <div class="col-12">
+            <div id="foto-persona-container"> <!-- Foto personal -->
+                <img
+                    id="foto-persona"
+                    [src]="persona.url_foto"
+                    alt="Foto"
+                /> 
+            </div>  
+            <div class="seccion texto-encabezado pb-4">
+                <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
+                <p class="presentacion">{{persona.presentacion}}</p>
+                <p class="presentacion">{{persona.sobre_mi}}</p>
+                <p class="presentacion">{{persona.lugar_nac}} <br> <br> </p>
+                <p class="presentacion">{{persona.objetivo}}</p>
+                <!-- <button class="btn btn-outline-primary mx-3" type="submit">Contacto</button> -->
+            </div>
+        </div>
+<!--             <div class="col-sm-4">
+        </div> -->
+    </div>
+    
+</div>

@@ -1,75 +1,258 @@
-/* COLORES */
-.white {
-    background-color: white;
+/* FORMATO GENERAL (PARA TODOS LOS TAMAÑOS DE PANTALLA) */
+
+body {
+    background-color: rgba(22, 22, 33, 1);     /* Color de fondo de la página */
 }
 
-.darkblue {
-    background-color: rgb(22, 22, 33);
-}
-
-.grey {
-    background: #F2F2F2;
-}
-
-.bg-gris {
-    background-color:#44546A
-}
-
-.bg-azuloscuro {
-    background-color: rgb(22, 22, 33);
-}
-
-
-
-/* SEPARACIONES */
-.ancho {
-    margin-left: 0px;
-    margin-right: 0px;
+#navbar {
+    background-color: rgba(33, 37, 41, 1);  /* Color de la barra de navegación */
+    margin: 0;
     padding: 0;
+    border: 0;
 }
 
-.centro {
-    align-items: center;
+#banner {
+    max-width:100%;
+    min-height: 300px;
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    object-position: 30% 50%;
 }
 
-.izquierda {
-    display: flex;
-    text-align: left;
-}
-
-.derecha {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
-
-.row {
-    padding: 0;
-    margin:0;
-}
-
-.row-info {
+#nombre { /* Nombre y apellido */
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     margin-top: 1em;
+    margin-bottom: 0.9em;
 }
 
-.separado {
-    margin-top: 0.6em;
-}
-
-
-/* FORMATOS DE TEXTO */
-.texto-info h1 {
-    font-size: 1.4em;
+h2 { /* Título sección */
+    font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
-.texto-info p {
+h3 { /* Título ítem lista */
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+.row-seccion {
+    background: white;  /* Color de fondo de las secciones */
+    margin: 0 0 0.8em 0;
+    padding: 0 2vw;
+}
+
+.col-seccion {
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+.seccion {
+    padding: 0.5em;
+    margin: 0;
+}
+
+.titulo-seccion {
+    background-color:rgb(72, 89, 109);  /* Color de fondo del título de las secciones */
+    color: white;  /* Color de fuente del título de las secciones */
+    margin: 0;
+    border: 0;
+    padding: 0.5em 1em 0.3em 1em;
+}
+
+
+p {
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 4em;
+    text-align: justify;
+    margin: 0 0 0.5em 0;
 }
 
-.negrita {
-    text-decoration-style: solid;
+.items-list {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Elimina el símbolo de viñeta de las listas */
+}
+
+.skill-container {
+    margin: 0 0 1em 0;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+
+.skill-item {
+    width: 8vw;
+    min-width: 130px;
+    margin: 1em 1em 2em 1em;
+}
+
+.skill-item h4 {
+    margin: -0.3em 0 0 0;
+    text-align: center;
+}
+
+
+
+
+
+/* *************************************** */
+/* *************************************** */
+/* FORMATO PARA DISPOSITIVOS MÓVILES */
+/* *************************************** */
+/* *************************************** */
+
+@media only screen and (max-width: 700px) { /* 768px */
+    #foto-persona-container {
+        height: 40vw;
+        width: 40vw;
+        max-height: 220px;
+        max-width: 220px;
+        min-height: 150px;
+        min-width: 150px;
+        margin: -20vw auto 0 auto;
+    }
+
+    #foto-persona {
+        background-color: white;
+        width: 100%;
+        max-width: 220px;
+        min-width: 150px;
+        border-radius: 50%;
+        object-fit: cover; /* Recorta la imagen sin deformarla */
+        aspect-ratio: 1/1;
+    }
+
+    #nombre {
+        font-size: 1.6em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-decoration-style: solid;
+        margin-top: 1em;
+        margin-bottom: 0.9em;
+        text-align: center;
+    }
+
+    .texto-encabezado {
+        margin: 0;
+    }
+
+    .presentacion {
+        margin: 0 0 1em 0;
+        text-align: center;
+    }
+
+    .item-container {
+/*         background: white; */
+        margin: 01em 0 1em 0;
+        padding: 0.5em;
+        border: solid 0.4em rgb(240, 240, 240);
+        text-align: center;
+    }
+
+    .data-container {
+        display:inline-flexbox;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5em 1em;
+    }
+
+    .logo-container {
+        height: 20vw;
+        width: 20vw;
+        min-width: 7em;
+        min-height: 7em;
+        display: inline-block;
+    }
+    
+    .logo-image {
+/*         background-color: white; */
+        height: 100%;
+        border-radius: 50%;
+        object-fit:cover; /* Recorta la imagen sin deformarla */
+        aspect-ratio: 1/1;
+    }
+
+    .list-info {
+        margin: 2em 0 0 0;
+    }
+    
+    .list-info h3 {
+        text-align:center;
+    }
+}
+
+
+
+/* *************************************** */
+/* PARA ACOMODAR LOS ÍCONOS DE LAS REDES SOCIALES CUANDO NO ENTRAN */
+/* *************************************** */
+@media only screen and (max-width: 806px) {
+    .navbar-brand {
+        flex: 1 1 auto !important;
+    }
+}
+
+
+/* *************************************** */
+/* *************************************** */
+/* FORMATO PARA PANTALLAS MÁS ANCHAS */
+/* *************************************** */
+/* *************************************** */
+@media only screen and (min-width: 701px) { /* 769px */
+    #foto-persona-container {
+        margin: -6em 0 0 5vw;
+    }
+    #foto-persona {
+/*         background-color: white; */
+        width: 25vw;
+        min-width: 8em;
+        max-width: 12em;
+        border-radius: 50%;
+        object-fit: cover; /* Recorta la imagen sin deformarla */
+        aspect-ratio: 1/1;
+    }
+
+    .item-container {
+/*         background: white; */
+        margin: 01em 0 1em 0;
+        padding: 0.5em;
+        border: solid 0.4em rgb(240, 240, 240);
+    }
+
+    .data-container {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: none;
+        text-align: center;
+    }
+
+    .logo-container {
+        height: 15vw;
+        width: 15vw;
+        max-width: 8em;
+        max-height: 8em;
+        min-width: 6em;
+        min-height: 6em;
+        display: inline-block;
+    }
+    
+    .logo-image {
+/*         background-color: white; */
+        height: 100%;
+        border-radius: 50%;
+        object-fit:cover; /* Recorta la imagen sin deformarla */
+        aspect-ratio: 1/1;
+    }
+
+    .list-info {
+        display:inline-block;
+        vertical-align: middle;
+        margin: 0.5em 1.5vw;
+    }   
 }

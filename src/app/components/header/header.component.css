@@ -1,19 +1,21 @@
-h1.navbar {
+
+
+/* h1.navbar {
     color:aliceblue
-}
+} */
 
-.header {
+/* .header {
     background-color:#44546A
-}
+} */
 
-.headertext {
+/* .headertext {
     background-color:rgb(236, 236, 236)
-}
+} */
 
 
 /* BOTÓN */
 
-.btn-navbar {
+/* .btn-navbar {
     background-color: #44546A;
     color:rgb(236, 236, 236);
     border-radius: 10%;
@@ -31,11 +33,11 @@ h1.navbar {
     background-color: #44546A;
     color:rgb(236, 236, 236);
     border-color:rgb(236, 236, 236);
-}
+} */
 
 
 /* ALINEACIÓN */
-.fondo-header {
+/* .fondo-header {
     align-self: center;
     padding: 0;
     margin: 0;
@@ -43,11 +45,11 @@ h1.navbar {
 
 .fondo-header img {
     width: 100%;
-}
+} */
 
-.nav-icon {
+/* .nav-icon {
     margin-right:1vw
-}
+} */
 
 
 

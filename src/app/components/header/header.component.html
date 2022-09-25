@@ -1,19 +1,32 @@
 <!-- Barra de navegación -->
-<nav class="navbar bg-dark">
-    <div class="navbar" >
-        <img src="../../../assets/Logos/APLogo-20-20 (2).png" alt="Logo Argentina Programa" height="50vp" class="d-inline-block align-text-top">
-        <img src="../../../assets/Logos/LogosInti.png" alt="Logo INTI" height="50vp" class="d-inline-block align-text-top">
+<div id="navbar">
+    <div class="row container-xxl mx-0">
+        <!-- justify-content-between justify-content-md-start -->
+        <div class="col d-flex justify-content-between justify-content-md-start py-3 px-0"> <!-- LOGOS AP / INTI -->
+            <div><img src="../../../assets/img/logo_AP.png" alt="Logo Argentina Programa" height="50vp" class=""></div>
+            <div><img src="../../../assets/img/LogosInti.png" alt="Logo INTI" height="50vp" class=""></div>
+        </div>
+
+        
+        <!-- justify-content-between justify-content-md-end -->
+        <div id="redes_sociales" class="col d-flex justify-content-evenly justify-content-sm-end  py-3"> <!-- REDES SOCIALES -->
+            <a class="navbar-brand" href="#">
+                <img src="../../../assets/img/instagram.png" alt="Instagram" height="38vp" class="d-inline-block align-text-top mx-2">
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="../../../assets/img/twitter.png" alt="Twitter" height="38vp" class="d-inline-block align-text-top mx-2">
+            </a>
+<!--             <a class="navbar-brand" href="#">
+                <img src="../../../assets/img/facebook.png" alt="Facebook" height="38vp" class="d-inline-block align-text-top">
+            </a> -->
+
+
+            <button class="btn btn-outline-success mx-3" type="submit">Login</button>
+            <!-- <button class="btn btn-outline-success mx-3" type="submit"><img src="../../../assets/img/menu.png" alt="Menú" height="23vp" class="d-inline-block align-text-top"></button> -->
+        </div>
+    
+
+
+
     </div>
-    <div class="navbar">
-        <a class="navbar-brand" href="#">
-            <img src="../../../assets/Logos/instagram.png" alt="Instagram" height="38vp" class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand" href="#">
-            <img src="../../../assets/Logos/twitter.png" alt="Twitter" height="38vp" class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand" href="#">
-            <img src="../../../assets/Logos/facebook.png" alt="Facebook" height="38vp" class="d-inline-block align-text-top">
-        </a>
-        <button class="btn btn-outline-success mx-3" type="submit">Login</button>
-    </div>
-</nav>
+</div>
