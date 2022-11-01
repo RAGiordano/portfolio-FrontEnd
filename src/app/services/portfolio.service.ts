@@ -18,7 +18,7 @@ export class PortfolioService {
   //PERSONA
 
   //urlPersona = 'http://localhost:8080/personas/';
-  urlPersona = 'https://ap-rag-backend.herokuapp.com/personas/';
+  urlPersona = 'https://rag-ap-frontend.web.app/portfolio/personas/';
   
  //Solicitar datos de persona
   public getPersona(): Observable<Persona>{//Observable para la petición asíncrona.
@@ -34,7 +34,7 @@ export class PortfolioService {
   //EXPERIENCIA LABORAL
 
   //urlExperiencia = 'http://localhost:8080/experiencia/';
-  urlExperiencia = 'https://ap-rag-backend.herokuapp.com/experiencia/';
+  urlExperiencia = 'https://rag-ap-frontend.web.app/portfolio/experiencia/';
   
   //Solicitar lista de experiencias laborales
   public listaExperiencia(): Observable<Experiencia[]>{
@@ -67,7 +67,7 @@ export class PortfolioService {
   //FORMACIÓN ACADÉMICA
 
   //urlFormacion = 'http://localhost:8080/formacion/';
-  urlFormacion = 'https://ap-rag-backend.herokuapp.com/formacion/';
+  urlFormacion = 'https://rag-ap-frontend.web.app/portfolio/formacion/';
 
     //Solicitar lista de formación académica
   public listaFormacion(): Observable<Formacion[]>{
@@ -99,7 +99,7 @@ export class PortfolioService {
   //COMPETENCIAS
 
   //urlCompetencias = 'http://localhost:8080/competencias/';
-  urlCompetencias = 'https://ap-rag-backend.herokuapp.com/competencias/';
+  urlCompetencias = 'https://rag-ap-frontend.web.app/portfolio/competencias/';
 
   //Solicitar un listado con las competencias laborales.
   public listaCompetencias(): Observable<Competencia[]>{
@@ -130,7 +130,7 @@ export class PortfolioService {
   //PROYECTO
 
   //urlProyectos = 'http://localhost:8080/proyectos/';
-  urlProyectos = 'https://ap-rag-backend.herokuapp.com/proyectos/';
+  urlProyectos = 'https://rag-ap-frontend.web.app/portfolio/proyectos/';
 
   //Solicitar lista de proyectos
   public listaProyecto(): Observable<Proyecto[]>{
