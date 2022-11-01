@@ -1,51 +1,39 @@
-export class persona {
-    id?: number;//Coloco el signo "?" para indicar que el dato no es requerido (porque se va a autogenerar)
+export class Persona {
+    id?: number;//Signo "?" para indicar que el dato no es requerido (porque se va a autogenerar)
     dni: String;
     nombre: String;
     apellido: String;
-    domicilio: String;
-    fecha_nac: String;//Después tengo que cambiar a tipo fecha (DATE)
-    lugar_nac: String;
+    fechaNac: String;
+    lugarNac: String;
     telefono: String;
     presentacion: String;
-    sobre_mi: String;
-    contraseña: String;
-    tipo_usuario: String;//Después ver si lo cambio a número o booleano
-    objetivo: String;
+    sobreMi: String;
     email: String;
-    url_foto: String;
-    url_banner: String;//Después tengo que cambiarlo por un id. Almacenar los banners aparte.
+    urlFoto: String;
+    urlBanner: String;
 
     constructor(dni: String,
                 nombre: String,
                 apellido: String,
-                domicilio: String,
-                fecha_nac: String,
-                lugar_nac: String,
+                fechaNac: String,
+                lugarNac: String,
                 telefono: String,
                 presentacion: String,
-                sobre_mi: String,
-                contraseña: String,
-                tipo_usuario: String,
-                objetivo: String,
+                sobreMi: String,
                 email: String,
-                url_foto: String,
-                url_banner: String) {
+                urlFoto: String,
+                urlBanner: String) {
                     this.dni = dni;
                     this.nombre = nombre;
                     this.apellido = apellido;
-                    this.domicilio = domicilio;
-                    this.fecha_nac = fecha_nac;
-                    this.lugar_nac = lugar_nac;
+                    this.fechaNac = fechaNac;
+                    this.lugarNac = lugarNac;
                     this.telefono = telefono;
                     this.presentacion = presentacion;
-                    this.sobre_mi = sobre_mi;
-                    this.contraseña = contraseña;
-                    this.tipo_usuario = tipo_usuario;
-                    this.objetivo = objetivo;
+                    this.sobreMi = sobreMi;
                     this.email = email;
-                    this.url_foto = url_foto;
-                    this.url_banner = url_banner;
+                    this.urlFoto = urlFoto;
+                    this.urlBanner = urlBanner;
                 }
     
 }

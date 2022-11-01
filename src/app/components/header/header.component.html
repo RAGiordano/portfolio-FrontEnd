@@ -21,7 +21,8 @@
             </a> -->
 
 
-            <button class="btn btn-outline-success mx-3" type="submit">Login</button>
+            <button class="btn btn-outline-success mx-3" type="button" (click)="login()" *ngIf="!isLogged">Iniciar sesión</button>
+            <button class="btn btn-outline-success mx-3" type="button" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesión</button>
             <!-- <button class="btn btn-outline-success mx-3" type="submit"><img src="../../../assets/img/menu.png" alt="Menú" height="23vp" class="d-inline-block align-text-top"></button> -->
         </div>
     

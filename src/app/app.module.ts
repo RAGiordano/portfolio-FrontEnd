@@ -8,14 +8,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { FormacionAcademicaComponent } from './components/formacion-academica/formacion-academica.component';
 import { FormacionComplementariaComponent } from './components/formacion-complementaria/formacion-complementaria.component';
-import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { CompetenciasComponent } from './components/competencias/competencias.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-import { HomeComponent } from './components/home/home.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component'
 import { LoginComponent } from './components/login/login.component';
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+// import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './services/interceptor-service';
+import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
+import { NuevaFormacionComponent } from './components/formacion-academica/nueva-formacion.component';
+import { EditarFormacionAcademicaComponent } from './components/formacion-academica/editar-formacion-academica.component';
+import { EditarCompetenciaComponent } from './components/competencias/editar-competencia.component';
+import { NuevaCompetenciaComponent } from './components/competencias/nueva-competencia.component';
+import { EditarEncabezadoPersonalComponent } from './components/encabezado-personal/editar-encabezado-personal.component';
+import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
+import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
+
 
 
 @NgModule({
@@ -26,17 +40,29 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     ExperienciaComponent,
     FormacionAcademicaComponent,
     FormacionComplementariaComponent,
-    HabilidadesComponent,
+    CompetenciasComponent,
     ProyectosComponent,
     FooterComponent,
     AcercaDeComponent,
-    HomeComponent,
     LoginComponent,
+    IniciarSesionComponent,
+    PortfolioComponent,
+    NuevaExperienciaComponent,
+    EditarExperienciaComponent,
+    NuevaFormacionComponent,
+    EditarFormacionAcademicaComponent,
+    EditarCompetenciaComponent,
+    NuevaCompetenciaComponent,
+    EditarEncabezadoPersonalComponent,
+    EditarProyectoComponent,
+    NuevoProyectoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    /* ReactiveFormsModule, */
         // Specify ng-circle-progress as an import
         NgCircleProgressModule.forRoot({
           // set defaults here
@@ -55,7 +81,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
           "showBackground": false,
           "responsive": true})
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

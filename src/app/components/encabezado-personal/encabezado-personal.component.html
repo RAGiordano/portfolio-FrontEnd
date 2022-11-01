@@ -1,11 +1,11 @@
-<!-- Banner -->
+<!-- ENCABEZADO PERSONAL -->
 <div class="container-xxl m-0 p-0 b-0"> 
     <div class="row row-seccion m-0 p-0 b-0"> <!-- Encabezado completo -->
         <div class="col-sm-12 m-0 p-0 b-0"> <!-- Banner personal -->
             <div class="banner-container m-0 p-0 b-0">
                 <img 
                 id="banner"
-                [src]="persona.url_banner"
+                [src]="persona.urlBanner"
                 alt="Banner personal"/>
             </div>                 
         </div>
@@ -17,16 +17,16 @@
             <div id="foto-persona-container"> <!-- Foto personal -->
                 <img
                     id="foto-persona"
-                    [src]="persona.url_foto"
+                    [src]="persona.urlFoto"
                     alt="Foto"
                 /> 
             </div>  
             <div class="seccion texto-encabezado pb-4">
+                <a href="/editarencabezadopersonal/{{persona.id}}" name="edit" class="btn btn-dark btn-sq mx-2" *ngIf="isLogged"><i class="bi bi-pencil"></i></a>
                 <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
-                <p class="presentacion">{{persona.presentacion}}</p>
-                <p class="presentacion">{{persona.sobre_mi}}</p>
-                <p class="presentacion">{{persona.lugar_nac}} <br> <br> </p>
-                <p class="presentacion">{{persona.objetivo}}</p>
+                <p class="presentacion">Hola {{persona.presentacion}}</p>
+                <p class="presentacion">{{persona.sobreMi}}</p>
+                <p class="presentacion">{{persona.lugarNac}} <br> <br> </p>
                 <!-- <button class="btn btn-outline-primary mx-3" type="submit">Contacto</button> -->
             </div>
         </div>

@@ -1,0 +1,57 @@
+<div class="container form my-5" *ngIf="persona">
+    <h1>Editar los datos del encabezado personal.</h1>
+    <div class="row my-5">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="form-control" id="dni" name="dni" [(ngModel)]="persona.dni" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="persona.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaNac">Fecha de nacimiento</label>
+                    <input type="text" class="form-control" id="fechaNac" name="fechaNac" [(ngModel)]="persona.fechaNac">
+                </div>
+                <div class="form-group">
+                    <label for="lugarNac">Lugar de nacimiento</label>
+                    <input type="text" class="form-control" id="lugarNac" name="lugarNac" [(ngModel)]="persona.lugarNac">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="persona.telefono">
+                </div>
+                <div class="form-group">
+                    <label for="presentacion">Título o presentación personal</label>
+                    <input type="text" class="form-control" id="presentacion" name="presentacion" [(ngModel)]="persona.presentacion">
+                </div>
+                <div class="form-group">
+                    <label for="sobreMi">Sobre mí</label>
+                    <input type="text" class="form-control" id="sobreMi" name="sobreMi" [(ngModel)]="persona.sobreMi">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="persona.email">
+                </div>
+                <div class="form-group">
+                    <label for="urlFoto">URL de la foto personal</label>
+                    <input type="text" class="form-control" id="urlFoto" name="urlFoto" [(ngModel)]="persona.urlFoto">
+                </div>
+                <div class="form-group">
+                    <label for="urlBanner">URL del banner del encabezado</label>
+                    <input type="text" class="form-control" id="urlBanner" name="urlBanner" [(ngModel)]="persona.urlBanner">
+                </div>
+                <button type="submit" class="btn btn-primary my-4">
+                    Guardar cambios
+                </button>
+                <a href="http://localhost:4200/portfolio" id="cancel" name="cancel" class="btn btn-primary m-3">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

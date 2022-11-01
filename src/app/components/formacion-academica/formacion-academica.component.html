@@ -1,44 +1,12 @@
 <!-- FORMACIÓN ACADÉMICA -->
-<!-- <div class="row row-seccion">
-    <div class="col-sm-12 col-seccion"> 
-        <div class="seccion">
-            <div class="titulo-seccion">
-                <h2>Formación académica</h2>
-                <div class="btn-edit">
-                    <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-                </div>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <div>
-                            <a href="#">
-                                <div class="logo-container">
-                                    <img 
-                                        class="logo-image"
-                                        src="https://www.cemmarg.com.ar/sites/default/files/styles/600/public/logo-utn-frc.png" 
-                                        alt="Logo UTN">
-                                </div>
-                                <div class="list-info">
-                                    <div>
-                                        <h3></h3>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <p>Profesorado de Educación Secundaria en Matemática en concurrencia con título de base. Instituto Superior de Estudios Pedagógicos (ISEP). Córdoba. 2018 – 2020.</p>
-                <p>Ingeniería en Sistemas de Información. Universidad Tecnológica Nacional (UTN), facultad Regional Córdoba. 1998 – 2004.</p>    
-            </div>
-            
-        </div>
-    </div>
-</div> -->
 
 <div class="titulo-seccion">
-    <h2>Formación académica</h2>
+    <!-- <div class=""> -->
+
+        <h2>Formación académica</h2>
+        <a href="/nuevaformacion" name="btn-nuevo" class="btn btn-dark btn-nuevo btn-sq mx-2" *ngIf="isLogged">+</a>
+    <!-- </div> -->
+    
 <!--                 <div class="btn-edit">
         <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
     </div> -->
@@ -47,15 +15,20 @@
     <div class="col-sm-12 col-seccion m-0 ">
         <div class="seccion">
             <div>
-                <ul class="items-list">
+                <ul class="items-list" *ngFor="let Formacion of formacion">
                     <li class="item-container">
+                        <div class="btn-edit-container">
+                            <a href="/editarformacion/{{Formacion.id}}" name="edit" class="btn btn-dark btn-sq mx-2" *ngIf="isLogged"><i class="bi bi-pencil"></i></a>
+                            <button name="delete" class="btn btn-dark btn-sq mx-2" (click)="borrar(Formacion.id)" *ngIf="isLogged"><i class="bi bi-trash"></i></button>    
+                        </div>
                         <div class="item">
                             <div class="data-container">
+
                                 <!-- <a href="#"> -->
                                     <div class="logo-container">
                                         <img 
                                             class="logo-image"
-                                            src="https://www.cemmarg.com.ar/sites/default/files/styles/600/public/logo-utn-frc.png"
+                                            src={{Formacion.urlLogo}}
                                             
                                             alt=""
                                         />
@@ -63,9 +36,11 @@
     
                                     <div class="list-info">
                                         <div>
-                                            <h3>Universidad Tecnológica Nacional (UTN)</h3>
-                                            <p>Ingeniería en Sistemas de Información</p>
-                                            <p>1998 - 2004</p>
+
+                                            <h3>{{Formacion.titulo}}</h3>
+                                            <p>{{Formacion.institucion}}</p>
+                                            <p>{{Formacion.descripcion}}</p>
+                                            <p>{{Formacion.fechaDesde}} - {{Formacion.fechaHasta}}</p>
                                         </div>
                                     </div>
                                     
@@ -79,72 +54,6 @@
                             </div>
                         </div> -->
                     </li>
-
-
-                    <li class="item-container">
-                        <div class="item">
-                            <div class="data-container">
-                                <!-- <a href="#"> -->
-                                    <div class="logo-container">
-                                        <img 
-                                            class="logo-image"
-                                            src="https://www.cemmarg.com.ar/sites/default/files/styles/600/public/logo-utn-frc.png"
-                                            
-                                            alt=""
-                                        />
-                                    </div>
-    
-                                    <div class="list-info">
-                                        <div>
-                                            <h3>Universidad Tecnológica Nacional (UTN)</h3>
-                                            <p>Ingeniería en Sistemas de Información</p>
-                                            <p>1998 - 2004</p>
-                                        </div>
-                                    </div>
-                                    
-                                <!-- </a> -->
-                            </div>
-                        </div>
-                        
-<!--                         <div class="data-control">
-                            <div class="btn-edit">
-                                <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-                            </div>
-                        </div> -->
-                    </li>
-
-                    <li class="item-container">
-                        <div class="item">
-                            <div class="data-container">
-                                <!-- <a href="#"> -->
-                                    <div class="logo-container">
-                                        <img 
-                                            class="logo-image"
-                                            src="https://www.cemmarg.com.ar/sites/default/files/styles/600/public/logo-utn-frc.png"
-                                            
-                                            alt=""
-                                        />
-                                    </div>
-    
-                                    <div class="list-info">
-                                        <div>
-                                            <h3>Universidad Tecnológica Nacional (UTN)</h3>
-                                            <p>Ingeniería en Sistemas de Información</p>
-                                            <p>1998 - 2004</p>
-                                        </div>
-                                    </div>
-                                    
-                                <!-- </a> -->
-                            </div>
-                        </div>
-                        
-<!--                         <div class="data-control">
-                            <div class="btn-edit">
-                                <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-                            </div>
-                        </div> -->
-                    </li>
-
 
 
                 </ul>
@@ -154,46 +63,3 @@
     
 
 </div>
-
-
-<!-- <div class="card mat-card">
-    <div id="formacion-academica">
-        <div class="card-titles">
-            <h2>Formación académica</h2>
-            <div class="btn-edit">
-                <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-            </div>
-        </div>
-        <div>
-            <ul class="items-list">
-                <li>
-                    <div class="data-container">
-                        <a href="#">
-                            <div class="logo-container">
-                                <img 
-                                    class="logo-image"
-                                    src="https://www.cemmarg.com.ar/sites/default/files/styles/600/public/logo-utn-frc.png"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="list-info">
-                                <div>
-                                    <h3>Univerdidad Tecnológica Nacional (UTN)</h3>
-                                    <P>Ingeniería en Sistemas de Información</P>
-                                    <p><time>1998</time> - <time>2004</time></p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="data-control">
-                        <div class="btn-edit">
-                            <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-
-</div> -->

@@ -1,0 +1,30 @@
+<!-- COMPETENCIAS -->
+<div class="titulo-seccion">
+    <h2>Competencias</h2>
+    <a href="/nuevacompetencia" name="btn-nuevo" class="btn btn-dark btn-nuevo btn-sq mx-2" *ngIf="isLogged">+</a>
+</div>
+<div class="row row-seccion ">
+    <div class="col-sm-12 col-seccion m-0 ">
+        <div class="seccion">
+            <div class="skill-container" >
+                <!-- <div class="container"> -->
+                    <div class="skill-item" *ngFor="let Competencia of comp">
+                        <circle-progress
+                            [percent]="(Competencia.porcentaje)"
+                            [imageSrc]="Competencia.urlLogo"
+                        ></circle-progress>
+                        <h4 class="skill-title">{{Competencia.nombre}}</h4>
+                        <div class="btn-edit-competencia">
+                            <a href="/editarcompetencia/{{Competencia.id}}" name="edit" class="btn btn-dark btn-sq mx-2" *ngIf="isLogged"><i class="bi bi-pencil"></i></a>
+                            <button id="delete" name="delete" class="btn btn-dark btn-sq mx-2" (click)="borrar(Competencia.id)" *ngIf="isLogged"><i class="bi bi-trash"></i></button>    
+                        </div>
+                        
+                        <!-- <h5>{{Competencia.descripcion}}</h5> -->
+
+                    </div>
+
+                <!-- </div> -->
+            </div>
+         </div>
+    </div>
+</div>
