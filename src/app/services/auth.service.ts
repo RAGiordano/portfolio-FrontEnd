@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
   //authURL = 'http://localhost:8080/auth/';
-  authURL = 'https://rag-ap-frontend.web.app/portfolio/auth/';
+  authURL = 'https://rag-ap-frontend.web.app/auth/';
   
 
   constructor(private httpClient: HttpClient) { }
