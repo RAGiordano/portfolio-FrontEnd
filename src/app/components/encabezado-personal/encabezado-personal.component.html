@@ -24,7 +24,7 @@
             <div class="seccion texto-encabezado pb-4">
                 <a href="/editarencabezadopersonal/{{persona.id}}" name="edit" class="btn btn-dark btn-sq mx-2" *ngIf="isLogged"><i class="bi bi-pencil"></i></a>
                 <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
-                <p class="presentacion">Hola {{persona.presentacion}}</p>
+                <p class="presentacion">{{persona.presentacion}}</p>
                 <p class="presentacion">{{persona.sobreMi}}</p>
                 <p class="presentacion">{{persona.lugarNac}} <br> <br> </p>
                 <!-- <button class="btn btn-outline-primary mx-3" type="submit">Contacto</button> -->
