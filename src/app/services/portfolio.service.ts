@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Competencia } from '../model/competencia';
 import { Experiencia } from '../model/experiencia';
 import { Formacion } from '../model/formacion';
+import { FormacionComp } from '../model/formacion-comp';
 import { Persona } from '../model/persona.model';
 import { Proyecto } from '../model/proyecto';
 
@@ -95,6 +96,35 @@ export class PortfolioService {
   }
 
 
+    //FORMACIÓN COMPLEMENTARIA
+
+  //urlFormacionComp = 'http://localhost:8080/formacioncomp/';
+  urlFormacionComp = 'https://rag-ap-frontend.web.app/formacioncomp/';
+
+    //Solicitar lista de formación complementaria
+  public listaFormacionComp(): Observable<FormacionComp[]>{
+    return this.http.get<FormacionComp[]>(this.urlFormacionComp + 'traer');
+  }
+
+  //Solicitar datos de una formación complementaria en particular.
+  public detalleFormacionComp(id: number): Observable<FormacionComp>{
+    return this.http.get<FormacionComp>(this.urlFormacionComp + 'detalle/' + id);
+  }
+
+  //Dar de alta una nueva formación complementaria.
+  public crearFormacionComp(formacionComp: FormacionComp): Observable<any>{
+    return this.http.post<any>(this.urlFormacionComp + 'crear', formacionComp);
+  }
+
+  //Editar formación complementaria
+  public editarFormacionComp(id: number, formacionComp: FormacionComp): Observable<any>{
+    return this.http.put<any>(this.urlFormacionComp + 'editar/' + id, formacionComp);
+  }
+
+  //Borrar formación complementaria
+  public borrarFormacionComp(id: number): Observable<any>{
+    return this.http.delete<any>(this.urlFormacionComp + 'borrar/' + id);
+  }
 
   //COMPETENCIAS
 

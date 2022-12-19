@@ -29,6 +29,8 @@ import { NuevaCompetenciaComponent } from './components/competencias/nueva-compe
 import { EditarEncabezadoPersonalComponent } from './components/encabezado-personal/editar-encabezado-personal.component';
 import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
 import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
+import { NuevaFormacionCompComponent } from './components/formacion-complementaria/nueva-formacion-comp.component';
+import { EditarFormacionCompComponent } from './components/formacion-complementaria/editar-formacion-comp.component';
 
 
 
@@ -56,6 +58,8 @@ import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.co
     EditarEncabezadoPersonalComponent,
     EditarProyectoComponent,
     NuevoProyectoComponent,
+    NuevaFormacionCompComponent,
+    EditarFormacionCompComponent,
   ],
   imports: [
     BrowserModule,
