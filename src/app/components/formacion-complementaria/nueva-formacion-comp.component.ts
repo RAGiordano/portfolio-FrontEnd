@@ -29,7 +29,7 @@ export class NuevaFormacionCompComponent implements OnInit {
                                       this.fechaDesde,
                                       this.fechaHasta,
                                       this.descripcion);
-    this.portfolioService.crearFormacion(formacionComp).subscribe
+    this.portfolioService.crearFormacionComp(formacionComp).subscribe
       (data =>{
         alert("Se agregó la formacion.");
         this.router.navigate(['']);

@@ -19,7 +19,7 @@ export class PortfolioService {
   //PERSONA
 
   //urlPersona = 'http://localhost:8080/personas/';
-  urlPersona = 'https://rag-ap-frontend.web.app/personas/';
+  urlPersona = 'https://portfolio-backend-production-50ca.up.railway.app/personas/';
   
  //Solicitar datos de persona
   public getPersona(): Observable<Persona>{//Observable para la petición asíncrona.
@@ -35,7 +35,7 @@ export class PortfolioService {
   //EXPERIENCIA LABORAL
 
   //urlExperiencia = 'http://localhost:8080/experiencia/';
-  urlExperiencia = 'https://rag-ap-frontend.web.app/experiencia/';
+  urlExperiencia = 'https://portfolio-backend-production-50ca.up.railway.app/experiencia/';
   
   //Solicitar lista de experiencias laborales
   public listaExperiencia(): Observable<Experiencia[]>{
@@ -68,7 +68,7 @@ export class PortfolioService {
   //FORMACIÓN ACADÉMICA
 
   //urlFormacion = 'http://localhost:8080/formacion/';
-  urlFormacion = 'https://rag-ap-frontend.web.app/formacion/';
+  urlFormacion = 'https://portfolio-backend-production-50ca.up.railway.app/formacion/';
 
     //Solicitar lista de formación académica
   public listaFormacion(): Observable<Formacion[]>{
@@ -99,7 +99,7 @@ export class PortfolioService {
     //FORMACIÓN COMPLEMENTARIA
 
   //urlFormacionComp = 'http://localhost:8080/formacioncomp/';
-  urlFormacionComp = 'https://rag-ap-frontend.web.app/formacioncomp/';
+  urlFormacionComp = 'https://portfolio-backend-production-50ca.up.railway.app/formacioncomp/';
 
     //Solicitar lista de formación complementaria
   public listaFormacionComp(): Observable<FormacionComp[]>{
@@ -129,7 +129,7 @@ export class PortfolioService {
   //COMPETENCIAS
 
   //urlCompetencias = 'http://localhost:8080/competencias/';
-  urlCompetencias = 'https://rag-ap-frontend.web.app/competencias/';
+  urlCompetencias = 'https://portfolio-backend-production-50ca.up.railway.app/competencias/';
 
   //Solicitar un listado con las competencias laborales.
   public listaCompetencias(): Observable<Competencia[]>{
@@ -160,7 +160,7 @@ export class PortfolioService {
   //PROYECTO
 
   //urlProyectos = 'http://localhost:8080/proyectos/';
-  urlProyectos = 'https://rag-ap-frontend.web.app/proyectos/';
+  urlProyectos = 'https://portfolio-backend-production-50ca.up.railway.app/proyectos/';
 
   //Solicitar lista de proyectos
   public listaProyecto(): Observable<Proyecto[]>{
